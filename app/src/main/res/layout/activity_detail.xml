@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity">
+
+    <include
+        layout="@layout/custom_toolbar"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:layout_marginStart="24dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Today"
+        app:layout_constraintTop_toBottomOf="@+id/custom_toolbar"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_month_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="April 20"
+        app:layout_constraintTop_toBottomOf="@id/tv_day"
+        app:layout_constraintStart_toStartOf="@id/tv_day"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="64sp"
+        android:layout_marginTop="24dp"
+        tools:text="16"
+        app:layout_constraintTop_toBottomOf="@id/tv_month_year"
+        app:layout_constraintStart_toStartOf="@id/tv_month_year"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_temp_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        tools:text="4"
+        app:layout_constraintTop_toBottomOf="@id/tv_temp"
+        app:layout_constraintStart_toStartOf="@id/tv_temp"
+        app:layout_constraintEnd_toEndOf="@id/tv_temp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="24dp"
+        tools:src="@drawable/ic_broken_image"
+        app:layout_constraintStart_toEndOf="@id/tv_temp"
+        app:layout_constraintTop_toTopOf="@id/tv_temp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_weather_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:text="Clear"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon"
+        app:layout_constraintStart_toStartOf="@id/iv_icon"
+        app:layout_constraintEnd_toEndOf="@id/iv_icon"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        tools:text="Humidity: 72%"
+        app:layout_constraintTop_toBottomOf="@id/tv_weather_status"
+        app:layout_constraintStart_toStartOf="@id/tv_temp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:text="Pressure: 1038 hPa"
+        app:layout_constraintTop_toBottomOf="@id/tv_humidity"
+        app:layout_constraintStart_toStartOf="@id/tv_temp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:text="Wind: 3 km/h NE"
+        app:layout_constraintTop_toBottomOf="@id/tv_pressure"
+        app:layout_constraintStart_toStartOf="@id/tv_temp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_locatioin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:text="Location: London"
+        app:layout_constraintTop_toBottomOf="@id/tv_wind"
+        app:layout_constraintStart_toStartOf="@id/tv_temp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
